@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>petcreds</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="petcreds">
+    <div class="main_body">
+      <%= render '/layouts/nav' %>
+      
+        <span class="notice"><%= notice %></span>
+        <span class="alert"><%= alert %></span>
+        <%= yield %>
+      
+    <!--============================== 
+                Footer 
+    ==============================-->
+    
+    </div><!-- End of Main body div -->
+
+    <footer class="main-footer">
+      <!-- Help Booking -->
+      <section class="booking-help">
+        <div class="ui container">
+          <h3>Need help booking?</h3>
+          <a class="email" href="mailto:help@petcreds.com">help@petcreds.com</a>
+        </div>
+      </section>
+
+      <!-- Footer navigation -->
+      <nav class="footer-navigation ui container">
+        <ul class="petcreds-list">
+          <li class="title"><h4>petcreds</h4></li>
+          <li><%= link_to( 'About', about_path ) %></li>
+          <li><a>Team</a></li>
+          <li><a>Careers</a></li>
+          <li><a>FAQ</a></li>
+          <li><a>Search Result</a></li>
+          <li><a>Search Result (E)</a></li>
+          <li><a>404 link (demo only)</a></li>
+          <li><a>Vet Profile</a></li>
+          <li><a>Pet Profile</a></li>
+          <li><a>Office Profile</a></li>
+          <li><a>Book an Appointment</a></li>
+          <li><a>Find Vets by Name</a></li>
+          <li><a>My Care Center</a></li>
+          <li><a>Contact</a></li>
+          <li><a>Shelter Pets</a></li>
+          <li><a>Sign In</a></li>
+          <li><a>Sign Up</a></li>
+          <li><a>Sign Up (Business)</a></li>
+          <li><a>Join</a></li>
+          <li><a>Trust</a></li>
+          <li><a>Vet Confirmation</a></li>
+          <li><a>Forget Password</a></li>
+        </ul>
+        <ul>
+          <li class="title"><h4>Cities</h4></li>
+          <li><a href="">New York</a></li>
+        </ul>
+        <ul>
+          <li class="title"><h4>Join us</h4></li>
+          <li><a>Are you a Vet? Join petcreds today</a></li>
+          <li><a>Are you a Caretaker? Register now</a></li>
+        </ul>
+        <ul>
+          <li class="title"><h4>Connect</h4></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Google +</a></li>
+          <li><a href="#">Linkedin</a></li>
+        </ul>
+      </nav>
+
+      <!-- Copyright -->
+      <section class="copyright">
+        <div class="ui container">
+          <div class="brand-info">
+            <%= link_to image_tag("petcreds-logo-white.svg"), root_path, class: 'footer-logo' %>
+            <p>Proudly made in New York City | Copyright 2017 petcreds</p>
+          </div>
+          <nav class="copyright-navigation">
+            <ul>
+              <li>Privacy Policy</li>
+              <li>Terms of Use</li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

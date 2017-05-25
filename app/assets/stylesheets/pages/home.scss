@@ -1,0 +1,208 @@
+
+.hero {
+    position: relative;
+    text-align: center;
+    @include breakpoint(tablet) {
+        height: 34em;
+    }
+    h1 {
+        color: $white;
+        font-size: 2em;
+        font-weight: 300;
+        margin-top: 0;
+        @include breakpoint(tablet) {
+            font-size: 2.5em;
+        }
+        @include breakpoint(desktop) {
+            font-size: 3.5em;
+        }
+        @include breakpoint(desktop-lg) {
+            font-size: 4em;
+        }
+    }
+    .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include breakpoint(tablet) {
+            height: 100%;
+        }
+    }
+    .hero-content {
+        background: $primary-dark;
+        box-sizing: border-box;
+        padding: 2em 0;
+        position: relative;
+        transition: $transition;
+        z-index: 2;
+        @include breakpoint(tablet) {
+            background: rgba($black, .2);
+            height: 100%;
+            padding: 4em 0;
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+    .hero-image {
+        background-position: top center;
+        background-repeat: no-repeat;
+        height: 35vh;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        @include breakpoint(tablet) {
+            height: 100%;
+            position: absolute;
+        }
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    .main-search {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        @include breakpoint(tablet) {
+            bottom: 4em;
+            flex-direction: row;
+            font-size: 1em;
+        }
+        @include breakpoint(desktop) {
+            font-size: 1.1em;
+        }
+        @include breakpoint(desktop-lg) {
+            font-size: 1.2em;
+        }
+    }
+    .form-item,
+    .button {
+        font-size: .95em;
+        width: 100%;
+        @include breakpoint(tablet) {
+            min-height: 4em;
+        }
+    }
+    .form-item {
+        padding-left: .75em;
+    }
+    .form-field {
+        margin-bottom: 1px;
+    }
+}
+
+.home-section {
+    padding-bottom: 2em;
+    padding-top: 2em;
+    @include breakpoint(tablet) {
+        padding-bottom: 5em;
+        padding-top: 5em;
+    }
+    &.mobile-app {
+        @include breakpoint(tablet) {
+            padding-bottom: 0;
+            .content {
+                margin-bottom: 5em;
+            }
+            .image {
+                align-self: flex-end;
+            }
+        }
+    }
+    .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @include breakpoint(tablet) {
+            flex-direction: row;
+        }
+    }
+    .actions {
+        margin-top: 2rem;
+    }
+    .action + .action {
+        margin-left: .5em;
+    }
+    .content {
+        flex-shrink: 1;
+        font-size: .85em;
+        text-align: center;
+        @include breakpoint(tablet) {
+            text-align: left;
+            width: 50%;
+        }
+    }
+    .image {
+        flex-shrink: 2;
+        margin-bottom: 1em;
+        padding: 0 5%;
+        text-align: center;
+        width: 14em;
+        @include breakpoint(tablet) {
+            margin-bottom: 0;
+            width: 50%;
+        }
+    }
+    &.chat {
+        background: $primary-lighter;
+    }
+    @include breakpoint(tablet) {
+        &.chat,
+        &.listing,
+        &.careers {
+            .image {
+                order: 2;
+            }
+        }
+    }
+    &.features {
+        background: $primary-dark;
+        h2 {
+            color: $white;
+        }
+        .lead,
+        .arrow-list {
+            color: $primary-light;
+        }
+    }
+    &.listing {
+        background: $secondary-light;
+    }
+    &.mobile-app {
+        background: $primary-lighter;
+    }
+    &.careers {
+        background: $primary;
+        h2 {
+            color: $white;
+        }
+        .lead,
+        .arrow-list {
+            // color: $primary-dark;
+        }
+    }
+}
+
+.underConstruction {
+    background: $secondary-light;
+    width: 100%;
+    height: inherit;
+    padding: 30px;
+    position: absolute;
+    z-index: 20;
+    display: none;
+}
+
+.underConstruction a {
+    color: $primary;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+}
+

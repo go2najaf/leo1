@@ -1,0 +1,155 @@
+
+.onboarding-login {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2em;
+
+  @include breakpoint(tablet) {
+    padding: 2em 0 4em;
+  }
+}
+
+.onboarding-social {
+  text-align: center;
+
+  .button {
+    display: block;
+    margin-bottom: .5em;
+    width: 100%;
+  }
+}
+
+.onboarding-join {
+  background: $gray-lighter;
+  border-top: 2px solid darken($gray-lighter, 5%);
+  padding: 2em 0;
+  text-align: center;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.forgot-password {
+  font-size: 1em;
+
+  @include breakpoint(tablet) {
+    float: right;
+  }
+}
+
+.onboarding-or-separator {
+  border-bottom: 2px solid $gray-lighter;
+  margin: 0 0 2em;
+  text-align: center;
+
+  .or {
+    background: $white;
+    color: $gray;
+    display: inline-block;
+    font-size: .75em;
+    font-weight: 700;
+    padding: .5em 1.5em;
+    position: relative;
+    top: 1em;
+  }
+
+  @include breakpoint(tablet) {
+    border-bottom: 0;
+    border-left: 2px solid $gray-lighter;
+    margin: 0 2em;
+    position: relative;
+
+    .or {
+      height: auto;
+      left: -50%;
+      margin-left: -2em;
+      margin-top: -1em;
+      position: absolute;
+      top: 50%;
+    }
+  }
+}
+
+@include breakpoint(tablet) {
+  .onboarding-login {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .onboarding-login-form {
+    min-width: 26em;
+  }
+
+  .onboarding-social {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    .button {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 20em;
+    }
+  }
+}
+
+.form {
+  &.business-sign-up,
+  &.sign-up {
+    margin-bottom: 3rem;
+  }
+
+  .pet {
+    margin-bottom: 3em;
+
+    & + .pet {
+      border-bottom: 1px solid $gray-lighter;
+      padding-bottom: 2em;
+    }
+  }
+}
+
+.welcome {
+  border-bottom: 2px solid $gray-lighter;
+  display: none;
+  margin: 3em 0;
+  padding-bottom: 3em;
+  text-align: center;
+
+  .image {
+    align-items: center;
+    display: flex;
+    margin-bottom: 1em;
+  }
+
+  @include breakpoint(tablet) {
+    display: block;
+
+    .image {
+      height: 10em;
+    }
+  }
+  @include breakpoint(desktop) {
+    .image {
+      height: 12em;
+    }
+  }
+  @include breakpoint(desktop-lg) {
+    .image {
+      height: 14em;
+    }
+  }
+}
+
+section.vet-confirmation {
+  padding: 30px;
+  h3 {
+    color: $primary-dark;
+  }
+  h2 {
+    color: $primary;
+  }
+}

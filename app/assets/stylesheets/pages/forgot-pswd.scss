@@ -1,0 +1,28 @@
+
+.forgot-pswd {
+  background: $primary-dark;
+  color: $white;
+}
+
+.fgt-pswd-entry {
+  margin: auto;
+  padding: 3rem 0;
+  text-align: center;
+
+  .image {
+    margin-bottom: 2rem;
+  }
+
+  @include breakpoint(tablet) {
+    max-width: 30rem;
+  }
+
+  p {
+    color: $white;
+  }
+
+  .result {
+    color: $white;
+    padding-top: 1rem;
+  }
+}

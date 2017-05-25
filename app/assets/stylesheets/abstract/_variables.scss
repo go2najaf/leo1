@@ -1,0 +1,40 @@
+$main-font:           'Source Sans Pro';
+
+$border-radius: 4px;
+
+$black:               #000;
+$gray-darker:         #353535;
+$gray-dark:           #646464;
+$gray:                #939494;
+$gray-light:          #c2c3c3;
+$gray-lighter:        #f1f2f2;
+$white:               #fff;
+
+$primary:             #34a1db;
+$primary-dark:        #003e4c;
+$primary-dark:        #016182;
+$primary-light:       #9ad7ef;
+$primary-lighter:     #dff1fa;
+
+$secondary:           #f58a1f;
+$secondary-dark:      #ba4727;
+$secondary-light:     #ffc639;
+$secondary-lighter:   #ffe499;
+
+$rating-color:        #ffc639;
+
+$success:             #4abc57;
+$error:               #dd364e;
+
+$facebook-color:      #3b5998;
+$google-color:        #db4437;
+$twitter-color:       #78cbef;
+$linkedin-color:      #1384c7;
+$instagram-color:     #e14b53;
+
+$tablet:      768px;
+$desktop:     982px;
+$desktop-lg:  1280px;
+
+$easing: cubic-bezier(.075, .820, .165, 1.000);
+$transition: all .5s $easing;

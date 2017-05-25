@@ -1,0 +1,55 @@
+.count {
+  background: $secondary;
+  border-radius: 500rem;
+  color: $white;
+  display: inline-block;
+  font-size: .6rem;
+  font-weight: 700;
+  line-height: 1;
+  min-height: 2em;
+  min-width: 2em;
+  padding: .5em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.has-count {
+  position: relative;
+
+  .count {
+    position: absolute;
+    right: -.5rem;
+    text-align: center;
+    top: -.5rem;
+  }
+}
+
+.label {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 2px;
+  font-size: .7em;
+  font-weight: 700;
+  line-height: 1;
+  padding: .35em;
+  text-transform: uppercase;
+
+  &.error {
+    border-color: $error;
+    color: $error;
+  }
+
+  &.success {
+    border-color: $success;
+    color: $success;
+  }
+
+  &.warning {
+    border-color: $secondary;
+    color: $secondary;
+  }
+}
+
+p .label {
+  margin: 0 .5em;
+}

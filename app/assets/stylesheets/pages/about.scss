@@ -1,0 +1,81 @@
+.about-us,
+.our-team,
+.faq {
+  padding: 2rem 0;
+}
+
+.about-us {
+  background: $secondary-light;
+  color: $primary-dark;
+
+  h3 {
+    color: $primary;
+    margin: 0;
+  }
+
+  .alternate {
+    color: $primary-dark;
+  }
+
+  .about-us-description {
+    margin-top: 20px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.our-team {
+  background: $primary;
+  color: white;
+  position: relative;
+}
+
+.team-list {
+  text-align: center;
+
+  .member-image {
+    margin-bottom: 1rem;
+  }
+
+  .name {
+    margin-bottom: .35rem;
+  }
+
+  .role {
+    color: $primary-dark;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .tagline {
+    border-top: 1px solid rgba($black, .1);
+    padding-top: 1rem;
+  }
+}
+
+.faq {
+  background: $primary-lighter;
+  color: $primary-dark;
+  padding-bottom: 60px;
+
+  .arrows {
+    float: right;
+  }
+
+  .ui.accordion .title:not(.ui) {
+    border-bottom: 1px solid $primary;
+    color: $primary;
+    font-family: $main-font;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .ui.accordion .title~.content p {
+    color: $primary-dark;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+}

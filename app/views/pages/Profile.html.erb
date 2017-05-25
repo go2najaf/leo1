@@ -1,0 +1,258 @@
+<div class="pet-profile">
+  <section class="pet-profile-header">
+    <div class="ui container">
+      <div class="user">
+        <div class="user-summary">
+          <img src="../images/pc-jenifer.png" alt="" class="large avatar">
+          <div class="details">
+            <h4 class="user-name"><%= current_user.first_name %>  <%= current_user.last_name %></h4>
+            <p class="location">Astoria, New York</p>
+          </div>
+        </div>
+      </div>
+      <div class="pet-dropdown">
+        <svg class="icon chevron-down">
+          <use xlink:href="#chevron-down"></use>
+        </svg>
+        <div class="active-item">
+          <article class="pet">
+            <div class="header">
+              <div class="image">
+                <img class="avatar mini bordered" src="../images/Roger.png">
+              </div>
+              <div class="content">
+                <div class="name">Roger</div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="options-list">
+          <?php for($i = 0; $i<3; $i++) : ?>
+          <article class="pet">
+            <div class="header">
+              <div class="image">
+                <img class="avatar mini bordered" src="../images/Roger.png">
+              </div>
+              <div class="content">
+                <div class="name">Roger</div>
+              </div>
+            </div>
+          </article>
+          <?php endfor ?>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pet-profile-content">
+    <div class="ui container">
+      <div class="ui stackable grid">
+        <aside class="six wide column pet-sidebar">
+          <div class="pet card">
+            <div class="image">
+              <img src="../images/Max.png" class="massive avatar bordered">
+            </div>
+            <button class="button primary small">
+              <svg class="icon share">
+                <use xlink:href="#share" />
+              </svg>
+              Share pet profile
+            </button>
+            <div class="pet-profile-progress">
+              <div class="progress">
+                <div class="percentage">
+                  <svg class="icon petcreds">
+                    <use xlink:href="#petcreds" />
+                  </svg>
+                  <span class="progress-bar" style="height: 64%"></span>
+                </div>
+                <p class="progress-text">
+                  <span class="amount">64%</span>
+                  <span class="text">of your profile is complete.</span>
+                </p>
+              </div>
+              <div class="tips">
+                <h4>Take these steps to complete it!</h4>
+                <ul class="check-list">
+                  <li>One</li>
+                  <li>Two</li>
+                  <li>Three</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="ten wide column pet-mainbar pet">
+          <section class="divided-section header">
+            <div class="content">
+              <h1 class="name">Roger</h1>
+              <p class="description">1 year old Bugle &middot; Pet id: 040686059</p>
+            </div>
+            <button class="button primary edit-profile">Edit profile</button>
+          </section>
+          <section class="divided-section">
+            <h2>Pet details</h2>
+            <div class="subsection">
+              <h4>About roger</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis recusandae labore cumque cupiditate odit, ipsa nam, eius ex blanditiis, consectetur fugit distinctio impedit architecto molestiae eos ratione est, ad nulla!</p>
+            </div>
+            <div class="subsection">
+              <h4>At a glance</h4>
+              <ul class="details-list">
+                <li class="detail">
+                  <h5 class="detail-title">Pet ID:</h5>
+                  <p class="detail-description">0210308</p>
+                </li>
+                <li class="detail">
+                  <h5 class="detail-title">Age:</h5>
+                  <p class="detail-description">1 year</p>
+                </li>
+                <li class="detail">
+                  <h5 class="detail-title">Sex:</h5>
+                  <p class="detail-description">Male</p>
+                </li>
+                <li class="detail">
+                  <h5 class="detail-title">Weight:</h5>
+                  <p class="detail-description">25lbs</p>
+                </li>
+                <li class="detail">
+                  <h5 class="detail-title">Breed:</h5>
+                  <p class="detail-description">Bugle</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>Medical history</h2>
+            <div class="subsection">
+              <h4>Current vet</h4>
+              <article class="veterinarian card" id="card_7">
+                <div class="card-content">
+                  <div class="card-image">
+                    <img src="../images/doc-1.png" class="avatar small">
+                  </div>
+                  <div class="card-data">
+                    <div class="card-header">
+                      <div class="meta"></div>
+                      <h4 class="name">
+                        Dr. Patsy Monroe
+                        <div class="rating">
+                          <div class="rating-stars">
+                            <div class="rating-bar" style="width:80%">
+                              <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rating"></use></svg>
+                            </div>
+                            <div class="rating-bg">
+                              <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rating"></use></svg>
+                            </div>
+                          </div>
+                        </div>
+                      </h4>
+                      <p class="job-title">Dog Cardiologist at <a href="" class="company">Platinum Care Vets</a></p>
+                    </div>
+                    <div class="card-details">
+                      <p class="last-visit">Last visit: 5:00 pm Sunday 08.25.2016 - Visit ID: 4064946982</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="subsection">
+              <h4>Allergies</h4>
+              <ul class="check-list">
+                <li>Allergy 1</li>
+                <li>Allergy 2</li>
+                <li>Allergy 3</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <h4>Current medication</h4>
+              <ul class="check-list">
+                <li>Medication 1</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <h4>Spayed/neutered?</h4>
+              <p>Yes</p>
+            </div>
+            <div class="subsection">
+              <h4>Past illness</h4>
+              <ul class="check-list">
+                <li>Illness x: 5:00 pm Sunday 08.25.2016 - Visit ID: 4064946982</li>
+                <li>Illness y: 5:00 pm Sunday 08.25.2016 - Visit ID: 4064946982</li>
+              </ul>
+            </div>
+            <div class="subsection">
+              <h4>Vaccines</h4>
+              <ul class="check-list">
+                <li>Vaccine #1</li>
+                <li>Vaccine #2</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+<div class="jumbotron">
+  <h1> </h1> 
+  <h2></h2>
+
+  <p>Consultant Feed at your service</p>
+  <p>profile page</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+
+<!--THe Body -->
+
+
+<div class="row">
+	<div class="col-xs-3">
+	<%=render '/components/pet_form'%>
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p>stats</p>
+			</div>
+		</div>
+	</div>
+	
+<div class="row">
+	<div class="col-xs-6">
+	<% for @p in @pets %>
+		<div class="panel panel=default">
+			<div class="panel-body">
+
+			 <p><%= image_tag @p.image.url(:thumb) %></p>	
+			<p> Pet Name:  <%= @p.pet_name %> | Age:  <%= @p.pet_age %> | Type:  <%= @p.tpe %>  </p>
+			<p> About:  <%= @p.about %> </p> 
+			<p> Weight: <%= @p.weight %>  |Height: <%= @p.height %> | Size: <%= @p.size %> </p>
+			<p> Breed: <%= @p.breed %>  |Sex:  <%= @p.sex %> |Spayed: <%= @p.spay %> </p>
+			<p>Allergies:  <%= @p.allergies %>  | Medications: <%= @p.medications %> | Vaccines: <%= @p.vaccine %> </p>
+
+			</div>
+		</div>
+		<%end%>
+	</div>
+<div class="row">
+	<div class="col-xs-3">
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p>about</p>
+			</div>
+		</div>
+	</div>
+<!-- second row  -->
+<div class="row">
+	<div class="col-xs-3 col-xs-offset-9">
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p>trends</p>
+			</div>
+		</div>
+	</div>
+  </div>
+ 	</div>
+		</div>
+			</div>

@@ -1,0 +1,192 @@
+<div class="office-profile">
+  <section class="profile-header">
+    <div class="ui container">
+      <div class="ui stackable grid">
+        <div class="ten wide column">
+          <div class="business card naked">
+            <div class="card-content">
+              <div class="card-image">
+              	<%= image_tag('pc-jenifer.png', class: 'massive avatar') %>
+              </div>
+              <div class="card-data">
+                <div class="card-header">
+                  <h4 class="name"><%= current_office.business_name %></h4>
+                  <ul class="social-icons">
+                    <li>
+                      <a href="" class="bubble twitter">
+                        <svg class="icon twitter">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="bubble facebook">
+                        <svg class="icon facebook">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="bubble linkedin">
+                        <svg class="icon linkedin">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="bubble instagram">
+                        <svg class="icon instagram">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-details">
+                  <p class="address"><%= current_office.address%> <%= current_office.city%> <%= current_office.state%>, <%= current_office.zip_code%></p>
+                  <p class="website">
+                    <a href="">www.website.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="six wide column">
+          <div class="profile-messaging">
+            <h4 class="highlighted">Have a quick question?</h4>
+            <p>Chat with <span><%= current_office.business_name %></span> now!</p>
+            <div class="messaging-buttons">
+              <a href="/my_care_center" class="button small primary">Launch Messenger</a>
+              <button class="button small offline">Offline</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <div class="map">
+    <iframe width="100%" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCvIBmUut40rEEmmlLxo-da8Mox9WRftIs
+    &q=Space+Needle,Seattle+WA" allowfullscreen></iframe>
+  </div>
+  <div class="ui container">
+    <div class="ui stackable grid">
+      <div class="ten wide column">
+        <h3 class="section-title">Our Vets</h3>
+        <section class="our-vets">
+          <div class="ui grid four columns">
+            <?php for($i = 0; $i < 5; $i++) : ?>
+            <div class="column">
+              <article class="veterinarian card naked">
+                <img src="../images/doc-1.png" alt="" class="avatar large">
+                <div class="rating">
+                  <div class="rating-stars">
+                    <div class="rating-bar" style="width:80%">
+                      <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rating"></use></svg>
+                    </div>
+                    <div class="rating-bg">
+                      <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rating"></use></svg>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <?php endfor ?>
+          </div>
+        </section>
+        <section class="profile-details">
+          <h3 class="section-title">Office Profile</h3>
+          <div class="description">
+            <h4>Our Services</h4>
+            <ul class="check-list">
+              <li>Grooming</li>
+              <li>Emergency</li>
+              <li>Boarding</li>
+              <li>Check Ups</li>
+            </ul>
+          </div>
+          <div class="description">
+            <h4>Statement</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p>
+          </div>
+        </section>
+      </div>
+      <div class="six wide column">
+        <section class="profile-news">
+          <h3 class="section-title">Latest</h3>
+          <p class="tag">Tag your furry friend at the office to be featured here!</p>
+          <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+            <div style="padding:8px;">
+              <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:60.0% 0; text-align:center; width:100%;">
+                <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
+              </div>
+              <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BRUY9cvjpir/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Here @petcreds, Sookie and Wilbur are involved in the creative process for our app. Wilbur was looking for inspiration...or maybe he saw a bird outside. Photo credit: @siamrutp  #askyourpetsaboutus #petsofinstagram #petcreds #pets #dogs #animallovers #puppy #dog #woof</a></p>
+              <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by Leoncio Perez (@leonperez512) on
+                <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-03-07T01:32:52+00:00">Mar 6, 2017 at 5:32pm PST</time>
+              </p>
+            </div>
+          </blockquote>
+          <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="jumbotron">
+<h1><%= current_office.business_name %> </h1> 
+<h2><%= current_office.business_category %></h2>
+
+  <p><%= current_office.address%> <%= current_office.city%> <%= current_office.state%> <%= current_office.zip_code%></p>
+  <p><%= current_office.email%> </p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn less</a></p>
+</div>
+
+<!--THe Body -->
+
+
+<div class="row">
+	<div class="col-xs-3">
+	<%=render '/components/vet_form'%>
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p>stats</p>
+			</div>
+		</div>
+	</div>
+	
+<div class="row">
+	<div class="col-xs-6">
+	<% for @v in @vets %>
+		<div class="panel panel=default">
+			<div class="panel-body">
+
+			<p><%= image_tag @v.image.url(:thumb) %></p>	
+			<p> Vet Name:  <%= @v.vet_name %>  </p>
+			|<p> About: <%= @v.about %>  </p>
+          <p>Website <%= @v.website %> | Website <%= @v.facebook %> | Website <%= @v.twitter %> | Website <%= @v.linkedin%></p>
+			</div>
+		</div>
+		<%end%>
+	</div>
+<div class="row">
+	<div class="col-xs-3">
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p>about</p>
+			</div>
+		</div>
+	</div>
+<!-- second row  -->
+<div class="row">
+	<div class="col-xs-3 col-xs-offset-9">
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p>trends</p>
+			</div>
+		</div>
+	</div>
+  </div>
+ 	</div>
+		</div>
+			</div>

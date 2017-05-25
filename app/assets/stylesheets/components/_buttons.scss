@@ -1,0 +1,112 @@
+.button {
+  background: $gray-lighter;
+  border: 0;
+  color: $gray-dark;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $main-font;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 1em 1.7em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: $transition;
+
+  .icon {
+    margin-right: .5em;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.primary,
+  &.secondary,
+  &.facebook,
+  &.google {
+    color: $white;
+  }
+
+  &.primary {
+    background: $primary;
+  }
+
+  &.secondary {
+    background: $secondary;
+  }
+
+  &.success {
+    background: $success;
+    color: $white;
+  }
+
+  &.inverted {
+    background: $white;
+    color: $primary;
+  }
+
+  &.large {
+    font-size: 1.2em;
+  }
+
+  &.medium {
+    font-size: .9em;
+  }
+
+  &.small {
+    font-size: .8em;
+    padding: 1em 1.7em;
+  }
+
+  &.mini {
+    font-size: .7em;
+    padding: .75em 1.2em;
+  }
+
+  &.micro {
+    font-size: .7em;
+    padding: .6em 1em;
+  }
+
+  &.facebook {
+    background: $facebook-color;
+
+    &:hover {
+      background: darken($facebook-color, 10%);
+    }
+  }
+
+  &.google {
+    background: $google-color;
+
+    &:hover {
+      background: darken($google-color, 10%);
+    }
+  }
+
+  &.cancel {
+    background: $error;
+    color: $white;
+  }
+
+  &.fluid {
+    display: block;
+    width: 100%;
+  }
+
+  &.offline {
+    background: $white;
+    border: 3px solid $success;
+    color: $success;
+  }
+
+  &.online {
+    background: $success;
+    color: $white;
+  }
+}
+.button-group {
+  display: flex
+}

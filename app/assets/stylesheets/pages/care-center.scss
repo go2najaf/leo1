@@ -1,0 +1,267 @@
+.panel-header {
+  margin: 2em 0;
+
+  .lead {
+    margin-bottom: 0;
+  }
+
+  .main-action {
+    float: right;
+  }
+}
+
+.invitation-form {
+  margin-bottom: 1rem;
+}
+
+.message-center {
+  margin: 2rem 0;
+
+  .new-session {
+    margin-bottom: 1rem;
+  }
+}
+
+.message-center-sidebar {
+  background: lighten($gray-lighter, 3%);
+
+  .panel {
+    margin-bottom: 1rem;
+
+  }
+
+  .message {
+    background: none;
+    cursor: pointer;
+    transition: $transition;
+
+    &.active {
+      color: $primary;
+    }
+
+    &:hover,
+    &.active {
+      background: $white;
+    }
+  }
+
+  .panel-title {
+    background: $gray-dark;
+    color: $white;
+    font-size: .9em;
+    font-weight: 400;
+    margin: 0;
+    padding: .75em;
+    text-transform: uppercase;
+
+    .count {
+      float: right;
+    }
+  }
+}
+
+.session-chatbox {
+  border: 2px solid $gray-lighter;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 17rem);
+  min-height: 30rem;
+
+  .session-data {
+    align-items: center;
+    background: $gray-lighter;
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    padding: .75em;
+    width: auto;
+
+    .text {
+      color: $gray-dark;
+      font-size: .7em;
+      text-transform: uppercase;
+    }
+
+    .username,
+    .pet {
+      display: inline-block;
+    }
+
+    .pet {
+      border-left: 1px solid darken($gray-lighter, 8%);
+      margin-left: 1em;
+      padding-left: 1em;
+    }
+
+
+    .username {
+      font-weight: 400;
+    }
+  }
+
+  .chat-message-list {
+    flex-grow: 1;
+    height: 100%;
+    overflow: auto;
+    padding: 1em;
+  }
+
+  .message-box {
+    border-top: 2px solid $gray-lighter;
+    height: 10rem;
+    padding: 1em;
+
+    .send-message {
+      float: right;
+    }
+  }
+}
+
+.chat-message-list {
+  > li {
+    margin-bottom: .75em;
+  }
+
+  .avatar {
+    float: left;
+    margin-top: 4px;
+  }
+
+  .text {
+    background: $gray-lighter;
+    display: inline-block;
+    font-size: .9em;
+    margin-left: 1rem;
+    max-width: 70%;
+    padding: .5em 1em;
+    position: relative;
+
+    &::after {
+      border: solid transparent;
+      border-color: transparent;
+      border-right-color: $gray-lighter;
+      border-width: 5px;
+      content: '';
+      height: 0;
+      margin-top: -5px;
+      pointer-events: none;
+      position: absolute;
+      right: 100%;
+      top: 16px;
+      width: 0;
+    }
+  }
+
+  .chat-message {
+    &.own {
+      text-align: right;
+
+      .avatar {
+        float: right;
+      }
+
+      .text {
+        background: $primary-lighter;
+        color: $primary-dark;
+        margin-left: 0;
+        margin-right: 1rem;
+
+        &::after {
+          border-left-color: $primary-lighter;
+          border-right-color: transparent;
+          left: 100%;
+          right: auto;
+        }
+      }
+    }
+  }
+}
+
+.session-rating,
+.pet-selection,
+.session-request {
+  padding: 2rem;
+
+  .main-actions {
+    margin-top: 2em;
+
+    .accept {
+      float: right;
+    }
+  }
+}
+
+.session-rating,
+.pet-selection {
+  background: $primary-lighter;
+  text-align: center;
+}
+
+.pet-selection {
+  .pet {
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: 0 3px 0 rgba($black, .05);
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: .5em;
+    transition: $transition;
+
+    &.selected,
+    &:hover {
+      background: $primary;
+
+      .name {
+        color: $white;
+      }
+    }
+  }
+}
+
+.session-request {
+  background: lighten($gray-lighter, 3%);
+  padding: 2rem;
+
+  .pet {
+    background: $white;
+  }
+
+  .request-date {
+    border-top: 1px solid darken($gray-lighter, 4%);
+    margin-top: .75em;
+    padding-top: .75em;
+  }
+}
+
+.settings,
+.business-center {
+  margin: 2rem 0;
+}
+
+.settings-sidebar {
+  .tab-navigation {
+    margin-top: 2rem;
+  }
+}
+
+.pet-basic-settings {
+  align-items: center;
+}
+
+.billing-settings {
+  .billing-summary {
+    border-top: 1px solid $gray-lighter;
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+}
+
+.business-center-admin {
+  position: relative;
+
+  .edit-business-details {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+  }
+}

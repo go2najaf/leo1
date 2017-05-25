@@ -1,0 +1,47 @@
+<div class="ui container">
+  <h1 class="section-title">Please sign in.</h1>
+  <section class="onboarding-login">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'onboarding-login-form ui form'}) do |f| %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, class: 'form-item'%>
+      </div>
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off", class: 'form-item' %>
+      </div>
+      <div class="two fields">
+        <div class="field">
+          <div class="ui checkbox">
+            <% if devise_mapping.rememberable? -%>
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+            <% end -%>     
+          </div>
+        </div>
+        <div class="field">
+          <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+            <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+          <% end -%>
+        </div>
+      </div>
+      <div class="form-actions">
+        <%= f.submit "Log in", class: 'button primary' %>  
+      </div>
+    <% end %>
+    <span class="onboarding-or-separator">
+      <span class="or">or</span>
+    </span>
+    <div class="onboarding-social">
+      <button class="button facebook fb-login-button">Log in with Facebook</button>
+      <button class="button google" data-onsuccess="onSignIn">Log in with Google</button>
+    </div>
+  </section>
+</div>
+
+<section class="onboarding-join">
+  <div class="container">
+    <h3>If you don't have a profile,<br>lets make one quickly!</h3>
+    <a class="button secondary" href="<?php echo url_UsUp(); ?>" alt="Go to Sign Up Page" title="Join now">Join now</a>
+  </div>
+</section>

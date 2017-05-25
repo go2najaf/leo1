@@ -1,0 +1,225 @@
+
+.profile-header {
+  padding: 2rem 0;
+
+  .card-details {
+    font-size: 1.2em;
+  }
+}
+
+.name {
+  font-size: 2em;
+}
+
+.social-icons {
+  font-size: 1.2em;
+  margin-top: .5em;
+}
+
+.profile-messaging {
+  color: $primary;
+
+  h4 {
+    font-weight: 700;
+    margin-bottom: .25em;
+  }
+
+  p {
+    color: $primary-dark;
+    font-size: 1.2em;
+  }
+
+  span {
+    color: $primary;
+  }
+}
+
+.messaging-buttons {
+  margin-top: 1rem;
+
+  .button + .button {
+    margin-left: .5em;
+  }
+}
+
+.map {
+  background: transparent;
+  margin-top: 20px;
+  position: relative;
+
+  iframe {
+    pointer-events: none;
+  }
+}
+
+.appointment-schedule {
+  background: $white;
+  display: none;
+  height: 750px;
+  position: absolute;
+  right: 5em;
+  top: -45px;
+  width: 450px;
+
+  .title {
+    background-color: $primary-dark;
+    color: $white;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .address {
+    color: $primary;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 20px;
+  }
+
+  .selection {
+    overflow: hidden;
+    padding: 20px;
+
+    select {
+      appearance: none;
+      background: transparent;
+      background-image: none;
+      border: 1px solid $gray-light;
+      border-radius: 0;
+      box-shadow: none;
+      color: $primary-dark;
+      font-size: 16px;
+      margin-bottom: 20px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    select:focus {
+      outline: none;
+    }
+  }
+}
+
+.section-title {
+  border-bottom: 2px solid $primary-dark;
+  color: $primary-dark;
+  font-weight: bold;
+  padding: .75em 0;
+  text-align: left;
+}
+
+.profile-details {
+
+  .description {
+    border-bottom: 1px solid $gray-light;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  ul,
+  p {
+    color: $gray-dark;
+  }
+}
+
+.profile-news {
+  .tag {
+    color: $primary;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px;
+  }
+}
+
+.our-vets {
+  text-align: center;
+
+  .avatar {
+    margin-bottom: .5em;
+  }
+}
+
+////////////////////////////////////////////////////////
+
+// .office-profile {
+
+//   .office-info {
+//     .office-messaging {
+//       font-size: 1.3em;
+//       font-weight: bold;
+//       color: $primary;
+//       margin: 20px;
+//       p {
+//         color: $primary-dark;
+//         font-size: 0.9em;
+//       }
+//       span {
+//         color: $primary;
+//       }
+//       .messaging-buttons {
+//         display: flex;
+//         margin-top: 20px;
+//         a {
+//           color: $white;
+//           text-decoration: none;
+//           font-weight: bold;
+//         }
+//         .button.mini {
+//           margin-right: 10px;
+//         }
+//       }
+//     }
+//   }
+//   .map {
+//     margin-top: 20px;
+//     background: transparent;
+//     position: relative;
+//     iframe {
+//       pointer-events: none;
+//     }
+//   }
+//   .section-title {
+//     width: 100%;
+//     padding: 20px 0px;
+//     border-bottom: 2px solid $primary-dark;
+//     font-size: 1.7em;
+//     font-weight: bold;
+//     color: $primary-dark;
+//     text-align: left;
+//   }
+//   .our-vets {
+//     display: flex;
+//     .vet {
+//       margin: 20px;
+//       text-align: center;
+//       .rating-vet {
+//         color: $gray-light;
+//         font-size: 1.3em;
+//         padding: 15px 0px;
+//         .icon {
+//           margin-right: 3px;
+//         }
+//       }
+//     }
+//   }
+//   .description {
+//     font-size: 1.1em;
+//     font-weight: 500;
+//     color: $gray;
+//     padding: 40px 0px;
+//     border-bottom: 2px solid $gray;
+//     ul {
+//       font-weight: 500;
+//       color: $gray;
+//     }
+//   }
+//   .office-latest {
+//     font-size: 1em;
+//     padding: 10px;
+//     color: $primary;
+//     font-weight: bold;
+//   }
+// }
+
+

@@ -1,0 +1,195 @@
+.notification {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.notification-content {
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+
+  .icon {
+    color: $gray;
+    margin-right: 1em;
+  }
+
+  .text {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+}
+
+.notification-actions {
+  align-items: center;
+  display: flex;
+
+  .action {
+    white-space: nowrap;
+
+    & + .action {
+      margin-right: .5em;
+    }
+  }
+
+  .close {
+    cursor: pointer;
+    height: .75em;
+    opacity: .5;
+    padding: .5em;
+    transition: $transition;
+    width: .75em;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.notifications-panel {
+  box-shadow: 0 2px 0 rgba($black, .05);
+  margin: 2em 0;
+}
+
+.notifications-header {
+  align-items: center;
+  background: $secondary-lighter;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+
+  .icon {
+    color: $secondary;
+    margin-right: .5em;
+  }
+
+  .count {
+    font-size: .5em;
+    margin-left: 1em;
+  }
+
+  .expand-collapse {
+    color: $gray-darker;
+    cursor: pointer;
+    margin: 0;
+    padding: .5em;
+  }
+
+  .title {
+    align-items: center;
+    display: flex;
+    margin-bottom: 0;
+  }
+}
+
+// .notifications-list {
+//   background: $gray-lighter;
+//   color: $primary;
+
+//   #apt_time {
+//     margin-right: 4px;
+//   }
+
+//   .notification-actions {
+//     color: $error;
+//   }
+
+//   .notification {
+//     border-bottom: 1px solid $gray-light;
+
+//     p,
+//     span {
+//       font-size: 1.1em;
+//       font-weight: bold;
+//     }
+//   }
+
+//   .icon {
+//     font-size: 1.4em;
+//   }
+
+//   .notification-content {
+//     display: inline-block;
+//   }
+
+//   .notification-content
+//   .msg-content {
+//     color: $gray;
+//     font-size: 0.9em;
+//     font-style: italic;
+//     font-weight: 300;
+//   }
+
+//   .morecontent span {
+//     display: none;
+//     font-size: 0.9em;
+//     font-weight: 200;
+//   }
+
+//   .morelink {
+//     display: block;
+//     font-weight: 300;
+//   }
+
+//   .icon {
+//     color: $gray-lighter;
+//     margin-right: .5em;
+//   }
+
+//   .count {
+//     font-size: .5em;
+//     margin-left: 1em;
+//     color: $gray-lighter;
+//     background: $primary;
+//   }
+
+//   .expand-collapse {
+//     color: $gray-lighter;
+//     cursor: pointer;
+//     margin: 0;
+//     padding: .5em;
+//   }
+
+//   .title {
+//     align-items: center;
+//     display: flex;
+//     margin-bottom: 0;
+//   }
+// }
+
+.notifications-list {
+  background: $gray-lighter;
+  color: $primary;
+
+  .apt_time {
+    margin-right: 1em;
+  }
+
+  .notification {
+    border-bottom: 1px solid $gray-light;
+
+    p,
+    span {
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+  }
+
+  .icon {
+    color: $primary;
+    font-size: 1.4em;
+
+    &.close {
+      color: $error;
+    }
+  }
+
+  .action {
+    font-weight: bold;
+  }
+}

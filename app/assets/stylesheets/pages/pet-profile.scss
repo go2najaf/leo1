@@ -1,0 +1,125 @@
+
+.pet-profile-header {
+  background: $primary-dark;
+  padding: 1rem;
+
+
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .user {
+    color: $white;
+  }
+}
+
+.pet-profile-content {
+  padding: 2rem 0;
+
+}
+
+.pet-sidebar {
+  text-align: center;
+
+  .image {
+    margin-bottom: 1rem;
+  }
+}
+
+.pet-profile-progress {
+  background: $white;
+  border-top: 1px solid darken($gray-lighter, 5%);
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: left;
+
+  .progress {
+    align-items: center;
+    display: flex;
+    font-size: 1.2em;
+  }
+
+  .percentage {
+    align-items: center;
+    background: $primary-lighter;
+    border-radius: 50%;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 2em;
+    height: 5rem;
+    justify-content: center;
+    margin-right: 1rem;
+    overflow: hidden;
+    position: relative;
+    width: 5rem;
+
+    .icon {
+      color: $primary-dark;
+      margin-right: .05em;
+      z-index: 2;
+    }
+
+    .progress-bar {
+      background: $primary-light;
+      bottom: 0;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  .progress-text {
+    color: $gray;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .amount {
+    color: $primary;
+    font-size: 3em;
+    line-height: 1;
+  }
+
+  .tips {
+    border-top: 1px solid $gray-lighter;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+}
+
+.pet-mainbar {
+  .title {
+    margin: 2rem 0 1rem;
+  }
+
+  .name {
+    margin-bottom: .5rem;
+  }
+
+  .description {
+    font-size: 1em;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .details-list {
+    border: 0;
+    font-size: 1.2em;
+    padding: 0;
+  }
+
+  .subsection {
+    margin-bottom: 2rem;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+  }
+}

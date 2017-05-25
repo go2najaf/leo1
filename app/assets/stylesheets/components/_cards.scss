@@ -1,0 +1,108 @@
+.card {
+  background: rgba($gray-lighter, .7);
+  box-shadow: 0 3px 0 $gray-lighter;
+
+  &.naked {
+    background: none;
+    box-shadow: none;
+
+    .card-content {
+      padding: 0;
+    }
+  }
+
+  &.bordered {
+    background: none;
+    border: 2px solid $gray-lighter;
+    box-shadow: none;
+  }
+
+  .card-details {
+    border-top: 1px solid rgba($gray-light, .5);
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+
+  .meta {
+    float: right;
+  }
+
+  .name {
+    font-weight: 400;
+    margin-bottom: .15em;
+
+    .rating {
+      display: inline-block;
+      margin-left: .25em;
+    }
+  }
+
+  .job-title {
+    color: $gray;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    a {
+      font-weight: 400;
+    }
+  }
+
+  p {
+    color: $gray-dark;
+    font-size: .9em;
+
+    & + p {
+      margin-top: .5em;
+    }
+  }
+
+  a {
+    font-size: 1em;
+  }
+
+  .card-content {
+    padding: 1.5em;
+  }
+
+  .card-image {
+    border-bottom: 1px solid rgba($gray-light, .5);
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+  }
+
+  .logged-status {
+    margin-top: 1em;
+  }
+
+  @include breakpoint(tablet) {
+    .card-image {
+      border: 0;
+      float: left;
+      margin-bottom: 0;
+      margin-right: 2em;
+      padding: 0;
+    }
+
+    .card-data {
+      overflow: hidden;
+    }
+  }
+
+  .card-footer {
+    background: $primary;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+
+    .main-action {
+      align-self: flex-end;
+      margin-top: 0;
+    }
+  }
+
+  .main-action {
+    margin-top: 1em;
+  }
+}

@@ -1,0 +1,62 @@
+.user {
+  align-items: center;
+  display: flex;
+
+  .user-details {
+    margin-left: .5rem;
+  }
+
+  .user-name {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+}
+
+.user-summary {
+  align-items: center;
+  display: flex;
+  font-size: 1.2em;
+
+  .avatar {
+    margin-right: 1rem;
+  }
+
+  .user-name {
+    margin: 0;
+  }
+}
+
+.card {
+  &.user {
+    .card-content {
+      padding: 1rem;
+      width: 100%;
+    }
+  }
+
+  .user-details {
+    background: rgba($white, .8);
+    margin: 1rem 0 0;
+    padding: 0 .75rem;
+
+    > li {
+      margin: 0;
+    }
+
+    .detail-title {
+      color: $gray;
+      font-size: .8em;
+      font-weight: 400;
+      margin-bottom: .5em;
+      text-transform: uppercase;
+    }
+
+    .detail {
+      padding: .75rem 0;
+
+      & + .detail {
+        border-top: 1px solid $gray-lighter;
+      }
+    }
+  }
+}

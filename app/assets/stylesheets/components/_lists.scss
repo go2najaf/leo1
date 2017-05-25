@@ -1,0 +1,19 @@
+.inline-list {
+  > li {
+    display: inline-block;
+    margin: 0;
+  }
+
+  &.alphabetical-search {
+    .letter {
+      margin: .15em;
+    }
+
+    .selected {
+      .button {
+        background: $primary;
+        color: $white;
+      }
+    }
+  }
+}

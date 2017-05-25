@@ -1,0 +1,12 @@
+.container {
+
+  &.padded {
+    padding: 2rem 0;
+  }
+}
+
+.divided-section {
+  border-bottom: 1px solid $gray-lighter;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}

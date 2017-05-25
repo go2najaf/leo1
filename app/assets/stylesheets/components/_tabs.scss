@@ -1,0 +1,60 @@
+.tabs {
+  .tab-navigation {
+    box-shadow: (0 3px 0 $gray-lighter);
+    display: flex;
+
+    &.horizontal {
+      box-shadow: none;
+      flex-direction: column;
+
+      .tab-item {
+        border-bottom: 1px solid $gray-lighter;
+
+        &.active {
+          background: lighten($primary-lighter, 5%);
+          box-shadow: (3px 0 0 $primary);
+        }
+      }
+    }
+  }
+
+  .tab-item {
+    cursor: pointer;
+    margin: 0;
+    padding: 1em;
+    text-decoration: none;
+
+    &.active {
+      box-shadow: (0 3px 0 $primary);
+      color: $primary;
+      font-weight: 400;
+
+      .icon {
+        color: $primary;
+      }
+    }
+
+    .icon {
+      color: $gray;
+      margin-right: .25em;
+
+      &.messages {
+        width: 1.4em;
+      }
+
+      &.user-circled,
+      &.gear {
+        height: 1.2em;
+        width: 1.2em;
+      }
+    }
+  }
+
+  .tab-panel {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

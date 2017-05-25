@@ -1,0 +1,31 @@
+.avatar {
+  border-radius: 50%;
+  height: 4rem;
+  vertical-align: middle;
+  width: 4rem;
+
+  &.bordered {
+    border: 2px solid $white;
+    box-shadow: 0 0 0 2px $gray-lighter;
+  }
+
+  &.mini {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+
+  &.small {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  &.large {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  &.massive {
+    height: 10rem;
+    width: 10rem;
+  }
+}

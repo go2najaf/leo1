@@ -1,0 +1,54 @@
+.rating {
+
+  .rating-stars {
+    color: $gray-light;
+    display: inline-block;
+    position: relative;
+  }
+
+  .rating-bar {
+    color: $rating-color;
+    display: inline-block;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+  }
+
+  .rating-score {
+    display: inline-block;
+    font-weight: 700;
+    margin-left: .5em;
+  }
+
+  .icon {
+    width: 5rem;
+  }
+}
+
+.rate {
+  display: inline-block;
+
+  &.large {
+    .rating-paws {
+      font-size: 2em;
+    }
+  }
+
+  &.boxed {
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: 0 3px 0 rgba($black, .05);
+    padding: .5em 1em;
+  }
+
+  .rating-paw {
+    color: $gray;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      color: $rating-color;
+    }
+  }
+}

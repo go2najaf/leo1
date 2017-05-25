@@ -1,0 +1,249 @@
+  <!--==========================================================================-->
+  <!--====================== Add rails form for pets here ======================-->
+  <!--========================================================================== 
+       TODO: Add/Remove Pet not working. 
+
+             Include checkbox to DB
+
+             Text fields with Select/Option placeholders should be select/option
+             with 'form-item' class
+
+             Email confirmation is missing include to DB
+
+             Add DOB to form
+
+             Cancel changes will delete the pet field entry
+
+             Save will save that pet and prompt if user wants to add another pet
+
+             Fix link and create page for petcreds Terms of Use  
+      ==========================================================================-->
+  <!--==========================================================================-->
+
+<div class="ui padded container">
+  <!-- Welcome -->
+  <div class="welcome computer only row">
+    <div class="ui four column relaxed grid">
+      <div class="column">
+        <div class="image">
+          <%= image_tag("pets.png", class: 'responsive-image') %>
+        </div>
+        <p class="text">where you can...</p>
+      </div>
+      <div class="column">
+        <div class="image">
+          <%= image_tag("pets-note.png", class: 'responsive-image') %>
+        </div>
+        <p class="text">save and share your pet's health information...</p>
+      </div>
+      <div class="column">
+        <div class="image">
+          <%= image_tag("lady-Phone.png", class: 'responsive-image') %>
+        </div>
+        <p class="text">share that information with a click of a button...</p>
+      </div>
+      <div class="column">
+        <div class="image">
+          <%= image_tag("lady-Care.png", class: 'responsive-image') %>
+        </div>
+        <p class="text">and message qualified professionals from the comfort of your own home.</p>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="section-title">Join petcreds.</h1>
+  <p class="lead">Create an Account</p>
+
+<%= form_for(resource, as: resource_name, :html => { :class => 'ui form sign-up' }, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="personal-data ui stackable grid">
+    <div class="four wide column">
+      <div class="image-upload">
+        <div class="image">
+          <input type="file">
+          <div class="round-image">
+            <%= image_tag('PC-team.png', class: 'responsive-image') %>
+          </div>
+        </div>
+        <span class="text-link edit">Edit picture</span>
+      </div>
+    </div>
+    <div class="twelve wide column">
+      <div class="name field">
+        <label>Name *</label>
+        <div class="compound-input">
+          <%= f.text_field :first_name, placeholder:'First', autofocus: true %>
+          <%= f.text_field :last_name, placeholder: 'Last', autofocus: true %>
+        </div>
+      </div>
+      <div class="email fields">
+        <div class="eight wide field">
+          <label>Email (will serve as username) *</label>
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+        <div class="eight wide field">
+          <label>Confirm Email *</label>
+          <input type="text" name="user_email_confirm" class="">
+        </div>
+      </div>
+      <div class="password fields">
+        <div class="eight wide field">
+          <label  for="user_password">Create Your Password *
+            <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+          </label>
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+        <div class="eight wide field">
+          <label for="user_password_confirm">Confirm Your Password *</label>
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+      </div>
+      <div class="address field">
+        <label>Address</label>
+        <div class="fields">
+          <div class="twelve wide field">
+            <%= f.text_field :address, placeholder:'Street', autofocus: true %>
+          </div>
+          <div class="four wide field">
+            <%= f.text_field :apt_num, placeholder:'Apt No.', autofocus: true %>
+          </div>
+        </div>
+        <div class="fields">
+          <div class="six wide field">
+            <%= f.text_field :state, placeholder:'this should be select/option', autofocus: true %>
+          </div>
+          <div class="six wide field">
+            <%= f.text_field :city, placeholder: 'City', autofocus: true %>
+          </div>
+          <div class="four wide field">
+            <%= f.text_field :zip_code, placeholder: 'ZIP', autofocus: true %>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui checkbox">
+          <label class="">
+          <input type="checkbox" name="subscribe" value="subscribe" checked>
+              Sign me up for the petcreds newsletter where I can learn about preventive pet care and the weekly pet care deal.
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pets">
+    <div class="add-pets">
+      <button class="button secondary small">
+          Add pets to your profile
+      </button>
+    </div>
+    <div class="pet">
+      <div class="ui stackable grid">
+        <div class="four wide column">
+          <div class="image-upload">
+            <div class="image">
+              <input type="file">
+              <div class="round-image">
+                <%= image_tag('pet_pic.png') %>
+              </div>
+            </div>
+            <span class="text-link edit">Edit picture</span>
+          </div>
+        </div>
+        <div class="twelve wide column">
+          <div class="fields">
+            <div class="twelve wide field">
+              <label>Name *</label>
+              <input type="text" name="pet_name" class="">
+            </div>
+            <div class="four wide field">
+              <label>Age *</label>
+              <input type="text" name="pet_age" class="">
+            </div>
+          </div>
+          <div class="field">
+            <label>About</label>
+            <textarea name="pet_about" class=""></textarea>
+          </div>
+          <div class="fields">
+            <div class="eight wide field">
+              <label>Animal Type *</label>
+              <input type="text" placeholder="select/option">
+            </div>
+            <div class="three wide field">
+              <label>Weight *</label>
+              <input type="text" name="pet_weight" class="form-item">
+            </div>
+            <div class="three wide field">
+              <label>Height *</label>
+              <input type="text" name="pet_height" class="" >
+            </div>
+            <div class="three wide field">
+              <label>Size *</label>
+              <input type="text" name="pet_size" class="" >
+            </div>
+          </div>
+          <div class="equal width fields">
+            <div class="field">
+              <label>Breed *</label>
+              <input type="text" name="pet_breed" class="" >
+            </div>
+            <div class="field">
+              <label>Sex *</label>
+              <input type="text" placeholder="select/option">
+            </div>
+            <div class="field">
+              <label>Spayed/Neutered *</label>
+              <input type="text" placeholder="select/option">
+            </div>
+          </div>
+          <div class="equal width fields">
+            <div class="field">
+              <label>Allergies</label>
+              <div class="compound-input">
+                <input type="text" name="pet_allergies" placeholder="select/option">
+                <button class="button small">+</button>
+              </div>
+            </div>
+            <div class="field">
+              <label>Medications</label>
+              <div class="compound-input">
+                <input type="text" name="pet_medications" placeholder="select/option">
+                <button class="button small">+</button>
+                </div>
+              </div>
+              <div class="field">
+                <label>Vaccines</label>
+                <div class="compound-input">
+                  <input type="text" name="pet_vaccines" placeholder="select/option">
+                  <button class="button small">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="pet-actions">
+              <input type="reset" value="Cancel Changes" class="button small">
+              <button class="button small">Remove this pet</button>
+              <button class="button small primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui checkbox">
+        <label for="agree">
+          <input type="checkbox" id="agree" name="agree" value="agree">
+          Yes I have read the <a href="<?php echo url_terms();?>">petcreds Terms of Use</a>
+        </label>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= f.submit "Continue", :class => 'button primary' %>
+    </div>
+  <% end %>
+</div>
+
+<!-- <%= render "devise/shared/links" %> -->
+

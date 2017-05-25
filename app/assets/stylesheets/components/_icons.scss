@@ -1,0 +1,48 @@
+.icon {
+  box-sizing: content-box;
+  display: inline-block;
+  height: 1em;
+  vertical-align: middle;
+  width: 1em;
+}
+
+.social-icons {
+  > li {
+    display: inline-block;
+
+    & + li {
+      margin-left: .2em;
+    }
+  }
+
+  .bubble {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 2em;
+    justify-content: center;
+    width: 2em;
+
+    &.facebook {
+      background: $facebook-color;
+    }
+
+    &.twitter {
+      background: $twitter-color;
+    }
+
+    &.linkedin {
+      background: $linkedin-color;
+    }
+
+    &.instagram {
+      background: $instagram-color;
+    }
+
+    .icon {
+      color: $white;
+      height: .9em;
+      width: .9 em;
+    }
+  }
+}

@@ -1,0 +1,182 @@
+.appointment {
+  position: relative;
+
+  .expand-collapse {
+    color: $gray;
+    cursor: pointer;
+    padding: .5em;
+    position: absolute;
+    right: .5em;
+    top: .5em;
+    transition: $transition;
+
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+
+  .appointment-row {
+    align-items: center;
+    background: $gray-lighter;
+    display: flex;
+    padding: 1em;
+
+    .pet {
+      min-width: 14rem;
+
+      .name {
+        font-size: 1.1em;
+      }
+    }
+
+    .appointment-basic-info {
+      .data + .data {
+        border-left: 1px solid $gray-light;
+        margin-left: .5em;
+        padding-left: .5em;
+      }
+    }
+  }
+
+  &.upcoming {
+    background: $primary-lighter;
+    border: 2px solid $primary-light;
+    padding: 1em;
+
+    .appointment-header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .appointment-title {
+      color: $primary-dark;
+      margin-top: .5em;
+    }
+  }
+
+  .veterinarian {
+    &.card {
+      background: none;
+      box-shadow: none;
+    }
+
+    .card-content {
+      padding: 0;
+    }
+
+    .card-image {
+      margin-right: 1em;
+    }
+
+    .card-details {
+      border-top: 1px solid rgba($black, .05);
+      margin-top: .75em;
+      padding-top: .75em;
+    }
+  }
+
+
+  .appointment-details {
+    background: lighten($primary-lighter, 5%);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 1.5em;
+
+    .section {
+
+      border-bottom: 1px solid rgba($primary-dark, .1);
+      margin: 0;
+      padding: 1em 0;
+
+      .grid {
+        align-items: center;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    .date,
+    .time {
+      display: inline-block;
+    }
+
+    .time {
+      border-left: 1px solid rgba($primary-dark, .1);
+      margin-left: .75em;
+      padding-left: .75em;
+    }
+
+    .day-number,
+    .hour {
+      font-size: 2em;
+      line-height: 1;
+    }
+    .month,
+    .am-pm {
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+
+  .upcoming-label {
+    background: lighten($primary-lighter, 5%);
+    border: 2px solid $primary;
+    color: $primary;
+    font-size: .75em;
+    font-weight: 700;
+    left: 1.25em;
+    padding: .5em .75em;
+    position: absolute;
+    text-transform: uppercase;
+    top: -1.25em;
+  }
+}
+
+.cancel-reschedule-appointment {
+  background: $white;
+  border: 2px solid $secondary-light;
+  margin-bottom: 2em;
+  padding: 1em;
+
+  .actions {
+    .cancel {
+      float: right;
+    }
+  }
+}
+
+.appointments-list {
+  > li {
+    margin-bottom: 0;
+
+    & + li {
+      border-top: 1px solid darken($gray-lighter, 7%);
+    }
+  }
+
+  .appointment-details {
+    display: none;
+  }
+
+  .appointment {
+    &.expanded {
+      .expand-collapse {
+        transform: rotate(180deg);
+      }
+
+      .appointment-row {
+        background: lighten($primary-lighter, 5%);
+        border-bottom: 1px solid rgba($black, .05);
+      }
+
+      .appointment-details {
+        display: flex;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.table {
+  width: 100%;
+
+  th {
+    background: $gray-lighter;
+    font-weight: 400;
+  }
+
+  tr {
+    border-bottom: 1px solid $gray-lighter;
+  }
+
+  td,
+  th {
+    padding: 1em;
+  }
+
+  .number {
+    text-align: right;
+  }
+}

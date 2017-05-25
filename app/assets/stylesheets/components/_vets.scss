@@ -1,0 +1,42 @@
+.vets-list {
+  > li {
+    margin-bottom: 1rem;
+  }
+
+}
+
+.veterinarian {
+  .session-rate {
+    text-align: right;
+
+    .price {
+      color: $primary;
+      font-size: 1.8em;
+    }
+
+    .price-reference {
+      color: $gray;
+      font-size: .8em;
+    }
+
+    .price,
+    .price-reference {
+      display: block;
+      line-height: 1.1;
+    }
+  }
+
+  .content {
+    line-height: 1.2;
+    margin-left: .5em;
+  }
+
+  .header {
+    align-items: center;
+    display: flex;
+  }
+
+  .name {
+    font-weight: 400;
+  }
+}

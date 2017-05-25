@@ -1,0 +1,140 @@
+.main-footer {
+  background: $gray-lighter;
+  font-size: .8em;
+}
+
+.footer-navigation,
+.booking-help,
+.copyright {
+  padding: 2rem 0;
+
+  a {
+    color: $gray-dark;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.copyright {
+  background: $primary-dark;
+  border-top: 1px solid $gray-light;
+  color: $primary-light;
+  text-align: center;
+
+  .footer-logo,
+  p {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  @include breakpoint(tablet) {
+    text-align: left;
+  }
+
+  .ui.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  a {
+    color: $primary-light;
+  }
+}
+
+.copyright-navigation {
+  @include breakpoint(tablet) {
+    li {
+      display: inline-block;
+
+      & + li {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+.booking-help {
+  background: $secondary-light;
+
+  .ui.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  h3 {
+    color: rgba($black, .8);
+    @include breakpoint(tablet) {
+      margin: 0;
+    }
+  }
+
+  .email {
+    color: $white;
+    font-size: (2 / 1.6) * 1em;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+.footer-navigation {
+  overflow: hidden;
+
+  .title {
+    border-bottom: 2px solid lighten($gray-light, 10%);
+    margin-bottom: 1em;
+  }
+
+  > ul {
+    font-size: 1em;
+    margin-bottom: 2em;
+
+    @include breakpoint(tablet) {
+      font-size: 1.1em;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    > ul {
+      display: inline-block;
+      float: left;
+      width: 20%;
+
+      &+ ul {
+        padding-left: 2rem;
+      }
+
+      &.petcreds-list {
+        width: 40%;
+      }
+    }
+  }
+}
+
+.petcreds-list {
+  > li {
+
+    &:not(.title) {
+      display: inline-block;
+      width: 44%;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 10%;
+    }
+  }
+}
